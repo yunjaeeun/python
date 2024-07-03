@@ -16,10 +16,10 @@
 
 def std_weight(height, gender):
     if gender == "남자":
-        weight = round((height * 0.01) * (height * 0.01) * 22, 2)
+        weight = round((height * 0.01) * (height * 0.01) * 22, 2)       # round(a, b) -> a의 소숫점 b까지 표시
         print("키 {0}cm 남자의 표준 체중은 {1}kg 입니다.".format(height, weight))
     elif gender == "여자":
-        weight = (height * 0.01) * (height * 0.01) * 21
+        weight = round((height * 0.01) * (height * 0.01) * 21, 2) 
         print("키 {0}cm 여자의 표준 체중은 {1}kg 입니다.".format(height, weight))
     else:
         print("외계인이세요?")

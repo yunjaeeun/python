@@ -14,4 +14,3 @@ for i in range(T):
     
     print(f"#{i + 1} {min_range} {min_count}")
 
-    

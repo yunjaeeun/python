@@ -22,22 +22,23 @@
 
 '''
 
-# for tc in range(1, 11):
-#     N = int(input())
-#     arr = list(map(int, input().split()))
-#     result = 0
+for tc in range(1, 11):
+    N = int(input())
+    arr = list(map(int, input().split()))
+    result = 0
 
-#     for i in range(2, N - 2):
-#         num = arr[i]
-#         dummy = [arr[i - 2], arr[i - 1], arr[i + 1], arr[i + 2]]
-#         isLeftOk = (num - dummy[0] > 1) and (num - dummy[1] > 1)
-#         isRightOk = (num - dummy[2] > 1) and (num - dummy[3] > 1)
+    for i in range(2, N - 2):
+        num = arr[i]
+        dummy = [arr[i - 2], arr[i - 1], arr[i + 1], arr[i + 2]]
+        
+        isLeftOk = num - dummy[0] > 0 and num - dummy[1] > 0
+        isRightOk = num - dummy[2] > 0 and num - dummy[3] > 0
 
-#         max_height = max(dummy)
-#         if isLeftOk and isRightOk:
-#             result += (num - max_height)
+        max_height = max(dummy)
+        if isLeftOk and isRightOk:
+            result += (num - max_height)
 
-#     print(f"#{tc} {result}")
+    print(f"#{tc} {result}")
 
 # for tc in range(1, 11):
 #     N = int(input())
@@ -47,19 +48,19 @@
 #     for i in range(2, N - 2):
 #         for j in range(arr[i], 2, -1):
 
-for tc in range(1):
-    N = int(input())
-    arr = list(map(int, input().split()))
-    result = 0
+# for tc in range(1):
+#     N = int(input())
+#     arr = list(map(int, input().split()))
+#     result = 0
 
-    for i in range(2, N - 2):
-        num = arr[i]
-        dummy = [arr[i - 2], arr[i - 1], arr[i + 1], arr[i + 2]]
-        max_height = max(dummy)
-        isLeftOk = num > dummy[0] and num > dummy[1]
-        isRightOk = num > dummy[2] and num > dummy[3]
+#     for i in range(2, N - 2):
+#         num = arr[i]
+#         dummy = [arr[i - 2], arr[i - 1], arr[i + 1], arr[i + 2]]
+#         max_height = max(dummy)
+#         isLeftOk = num > dummy[0] and num > dummy[1]
+#         isRightOk = num > dummy[2] and num > dummy[3]
 
-        if isLeftOk and isRightOk:
-            result += (num - max_height)
+#         if isLeftOk and isRightOk:
+#             result += (num - max_height)
 
-    print(f"#{tc} {result}")
+#     print(f"#{tc} {result}")

@@ -20,7 +20,7 @@ for tc in range(1, T + 1):
     for i in range(1, N):
         if arr[i - 1] < arr[i]:
             count += 1        
-        elif arr[i - 1] > arr[i]:
+        else:
             count = 1
         
         if count > result:
